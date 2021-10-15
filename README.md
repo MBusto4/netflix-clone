@@ -1,2 +1,2 @@
 # netflix-clone
-Fullstack Netflix
+Fullstack Netflix using TMDP api database for movies
