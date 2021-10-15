@@ -29,7 +29,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
         fetchData()
     }, [fetchUrl])
 
-    console.log('Request---->', movies)
+    // console.log('Request---->', movies)
 
     return (
         <div className='row'>
