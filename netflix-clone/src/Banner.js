@@ -27,6 +27,11 @@ function Banner() {
     console.log("RANDOM MOVIE---->", movie)
     console.log("RANDOM MOVIE NAME---->", movie.name)
 
+    //function to stop the movie description from being to big
+    function truncate(str, n) {
+        return str?.length > n ? str.substr(0, n - 1) + "..." : str
+    }
+
     return (
         <header className='banner'
             style={{
@@ -35,7 +40,7 @@ function Banner() {
                 backgroundPosition: "center center"
             }}>
             <div className="banner__contents">
-                <h1>
+                <h1 className='banner__title'>
                     {movie?.title || movie?.name || movie?.original_name}
                 </h1>
                 <div className="banner__buttons">
@@ -43,15 +48,10 @@ function Banner() {
                     <button className="banner__button">My List</button>
                 </div>
                 <h1 className='banner__description'>
-                    {movie?.overview}
+                    {truncate(movie?.overview, 200)}
                 </h1>
             </div>
-            {/* Background img */}
-            {/* title */}
-            {/* div with 2 buttons */}
-            {/* desscription */}
-
-
+            <div className="banner__bottom"></div>
         </header>
     )
 }
