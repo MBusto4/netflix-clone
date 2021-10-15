@@ -3,6 +3,10 @@ import "./Row.css"
 import axios from './axios'
 import requests from './requests'
 
+
+const base_url = 'https://image.tmdb.org/t/p/original/'
+
+
 function Row({ title, fetchUrl }) {
     //creating state
     const [movies, setMovies] = useState([])
@@ -13,23 +17,31 @@ function Row({ title, fetchUrl }) {
     useEffect(() => {
         //if [] means run once when the row loads, and dont run again
         //lets say we pass in [movies] it will run every time movies changes
+        //whenever u are using and aysnc function inside a useEffect it has to be dependent on that variable
         async function fetchData() {
             const request = await axios.get(fetchUrl)
             //data will come back as data.results
-            console.log('Request---->', request)
+            const allMovies = request.data.results
+            setMovies(allMovies)
             return request
-
         }
         fetchData()
+    }, [fetchUrl])
 
-
-    }, [])
+    console.log('Request---->', movies)
 
     return (
         <div className='row'>
             <h1>{title}</h1>
             {/* Container */}
-            div.
+            <div className="row__posters">
+                {movies.map((movie) => (
+                    <img src={`${base_url}${movie.poster_path}`} alt={movie.name} />
+
+                ))}
+            </div>
+
+
 
         </div>
     )
