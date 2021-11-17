@@ -1,7 +1,8 @@
 # netflix-clone
 
 ## Screenshots
-<img src="https://user-images.githubusercontent.com/66042550/142274977-7e22fd3a-a485-4187-8949-208dbdaeae47.png" width="400" height="250"> <img src="hhttps://user-images.githubusercontent.com/66042550/142274985-ea7902b1-f46f-4779-b1d6-fb24de2861e6.png" width="400" height="250"> 
+<img src="https://user-images.githubusercontent.com/66042550/142274977-7e22fd3a-a485-4187-8949-208dbdaeae47.png" width="400" height="250"> <img src="https://user-images.githubusercontent.com/66042550/142275354-a732f83c-cef6-473e-9412-7e7626f6cbc2.png" width="400" height="250"> 
+
 
 
 ## Features to Try!
